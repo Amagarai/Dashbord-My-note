@@ -1,0 +1,35 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Accueil</div>
+      <div class="page__content shadow p-3 position-relative">
+          <mat-card class="example-card" style="background-color:rgb(60, 199, 22)">
+            <mat-card-header class="text-center">
+              <mat-card-title>Nombre de d'utilisateur</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+               20
+              </p>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="example-card" style="background-color:rgb(20, 151, 217)">
+            <mat-card-header class="text-center">
+              <mat-card-title>Nombre de d'utilisateur</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+               test
+              </p>
+            </mat-card-content>
+          </mat-card>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

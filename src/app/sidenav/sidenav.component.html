@@ -1,0 +1,26 @@
+<mat-nav-list>
+  <div class="logo py-4">
+    <img src="../../assets/note.png" alt="Company Logo"/>
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2"></h2>
+
+  <!-- Admin view -->
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/home">
+    <mat-icon>analytics</mat-icon> Acceuil
+  </a>
+  <!-- Admin view (notification) -->
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/list">
+    <mat-icon>group</mat-icon> Liste des utilisateurs
+  </a>
+  <!-- Compagnie view -->
+  <a mat-list-item routerLinkActive="list-item-active">
+    <mat-icon>person_add</mat-icon> Ajouter un admin
+  </a>
+
+  <div class="parametre">
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/profil">
+      <mat-icon>settings</mat-icon> Profile
+    </a>
+  </div>
+</mat-nav-list>
