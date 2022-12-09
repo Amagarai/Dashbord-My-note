@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SidenavComponent implements OnInit {
 
   hidden: boolean = false;
+  user: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.user = JSON.parse(localStorage['user'])
   }
   toggleBadgeVisibility() {
     this.hidden = !this.hidden;

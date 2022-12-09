@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../Service/api.service';
 
 @Component({
   selector: 'app-list-user',
@@ -9,13 +10,20 @@ export class ListUserComponent implements OnInit {
 
   title = 'admin-panel-layout';
   sideBarOpen = true;
-
-  constructor() { }
+  list: any;
+  constructor(private service: ApiService) { }
 
   ngOnInit(): void {
+    this.Liste()
   }
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
+  }
+
+  Liste(){
+    return this.service.ListeUser().subscribe(res=>{
+      this.list = res
+    })
   }
 
 }

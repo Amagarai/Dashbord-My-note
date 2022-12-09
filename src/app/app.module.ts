@@ -52,7 +52,8 @@ import { ListUserComponent } from './list-user/list-user.component';
     MatTableModule,
     MatAutocompleteModule,
     MatSlideToggleModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,17 +4,17 @@
 
 <div class="form">
   <mat-card>
-    <form action="">
+    <form #data="ngForm" (ngSubmit)="Login(data)">
       <div class="chps">
         <div class="inp">
-          <input type="text" placeholder="login">
+          <input type="text" placeholder="login" name="login" ngModel>
         </div>
         <div class="inp">
-          <input type="password" name="" id="" placeholder="mot de passe">
+          <input type="password" name="password" placeholder="mot de passe" ngModel>
         </div>
       </div>
       <div class="inp">
-        <button routerLink="/home">Connexion</button>
+        <button type="submit">Connexion</button>
       </div>
     </form>
     <a href="" style="color: rgb(174, 174, 174); font-size: 15px;">Mot de passe oublié?</a>
