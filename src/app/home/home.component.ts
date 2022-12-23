@@ -27,8 +27,6 @@ export class HomeComponent implements OnInit {
   ListUser(){
     return this.service.ListeUser().subscribe(res =>{
       this.list_user = res
-      console.log(res);
-
     })
   }
 
