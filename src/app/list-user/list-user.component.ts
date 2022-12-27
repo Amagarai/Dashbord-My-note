@@ -23,6 +23,8 @@ export class ListUserComponent implements OnInit {
   Liste(){
     return this.service.ListeUser().subscribe(res=>{
       this.list = res
+      console.log(res);
+
     })
   }
 

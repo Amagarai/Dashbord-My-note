@@ -8,20 +8,32 @@
     <div class="container-fluid page">
       <div class="d-flex page__box p-3 mt-2">Les utilisateurs</div>
       <div class="page__content shadow p-3 position-relative">
-        <mat-card class="example-card" *ngFor="let i of list">
-          <mat-card-header class="text-center">
-            <mat-card-title style="color: rgb(6, 66, 151);">{{i.pseudo}}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              <span>Nom complet: {{i.nomComplet}} </span>  <br><br>
-              <span>Numero : {{i.numero}} </span>  <br><br>
-              Nombre de note: {{i.notes.length}} <br><br>
-              Nombre de categorie: {{i.categories.length}} <br>
-            </p>
-          </mat-card-content>
-        </mat-card>
+        <div class="card" *ngFor="let i of list">
+          <header class="card-header">
+            <p>Compte crée le  {{i.date}}</p>
+            <h2 *ngIf="!i.nomComplet">Cet utilisateur n'as pas ajouter son vrai nom</h2>
+            <h2 *ngIf="i.nomComplet">{{i.nomComplet}}</h2>
+          </header>
 
+          <div class="card-author">
+            <a class="author-avatar">
+              <img src="../../assets/Personne.png" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+
+            <div class="author-name">
+              <div class="author-name-prefix">{{i.pseudo}}</div>
+              <!-- William Kidd -->
+            </div>
+          </div>
+          <div class="tags">
+            <a>{{i.notes.length}} notes</a>
+            <a>{{i.categories.length}} categories</a>
+          </div>
+        </div>
+<!-- fin -->
       </div>
     </div>
   </mat-drawer-content>

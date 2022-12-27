@@ -7,7 +7,21 @@
     <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
     <div class="container-fluid page">
       <div class="d-flex page__box p-3 mt-2">Accueil</div>
-      <div class="page__content shadow p-3 position-relative">
+
+        <div class="container">
+          <div class="informations-bar">
+            <div class="text">
+              Projet de soutenance : <span style="color: rgb(0, 149, 255); font-weight: bold;"> My Note</span>
+            </div>
+
+            <div class="profile">
+              <img src="../../assets/melou.jpg">
+              <p class="name">Aminata Magassouba</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
           <mat-card class="example-card" style="background-color:rgb(60, 199, 22)">
             <mat-card-header class="text-center">
               <mat-card-title>Nombre d'utilisateur</mat-card-title>
@@ -29,7 +43,8 @@
               </p>
             </mat-card-content>
           </mat-card>
+        </div>
       </div>
-    </div>
+    <!-- </div> -->
   </mat-drawer-content>
 </mat-drawer-container>

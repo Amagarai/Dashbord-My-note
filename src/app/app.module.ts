@@ -24,6 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ListUserComponent } from './list-user/list-user.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListUserComponent } from './list-user/list-user.component';
     HomeComponent,
     HeaderComponent,
     SidenavComponent,
-    ListUserComponent
+    ListUserComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
