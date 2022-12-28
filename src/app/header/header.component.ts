@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
   user: any;
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.user = JSON.parse(localStorage['user'])
@@ -19,7 +20,8 @@ export class HeaderComponent implements OnInit {
   }
 
   logOut(){
-
+    localStorage.removeItem('user');
+    this.route.navigate(['login'])
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { ApiService } from '../Service/api.service';
 
 @Component({
@@ -22,10 +23,20 @@ export class LoginComponent implements OnInit {
         console.log(res);
         this.donne = res;
         localStorage.setItem('user', JSON.stringify(this.donne))
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Bienvenue Mlle '+ this.donne.nom,
+          showConfirmButton: false,
+          timer: 2500
+        })
         this.router.navigate(['home'])
       }else{
-        console.log("mot de passe inconr");
-
+        Swal.fire(
+          'Incorrect!',
+          'Mot de passe ou login incorrect.',
+          'error'
+        )
       }
     })
   }
